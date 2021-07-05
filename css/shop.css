@@ -5,3 +5,35 @@
     rgba(24, 138, 141, 1) 88.1%
   );
 }
+#miniHero a {
+  display: block;
+  color: #ddd;
+  text-transform: uppercase;
+  cursor: pointer;
+  font-size: 20px;
+  font-weight: 400;
+  transition: 0.3s all;
+}
+#miniHero a:hover,
+#miniHero a.selected {
+  color: #fff;
+  font-weight: 600;
+}
+#miniHero a.selected {
+  font-size: 30px;
+}
+#compressed {
+  display: none;
+}
+#compressed h2 {
+  font-size: 25px;
+  margin-bottom: 8px;
+}
+.breadcrumbs .material-icons {
+  position: relative;
+  top: 8px;
+}
+
+.breadcrumbs a{
+  color: green;
+}

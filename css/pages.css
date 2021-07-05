@@ -1,10 +1,11 @@
 #miniHero {
   box-shadow: 0 2px 2px 0 rgb(0 0 0 / 14%), 0 3px 1px -2px rgb(0 0 0 / 12%),
     0 1px 5px 0 rgb(0 0 0 / 20%);
-  padding-top: 114px;
+  padding-top: 106px;
   text-align: center;
   color: #fff;
   padding-bottom: 10px;
+  position: relative;
 }
 #miniHero h1 {
   font-weight: 800;
@@ -17,6 +18,9 @@ nav:nth-child(2) {
 @media only screen and (min-width: 601px) {
   nav:nth-child(2) {
     top: 64px;
+  }
+  #miniHero {
+    padding-top: 114px;
   }
 }
 nav .myBadge {
