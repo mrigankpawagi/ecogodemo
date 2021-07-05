@@ -1,5 +1,8 @@
 M.AutoInit();
-$("#slide-out").load("components/menu.html");
-$("nav").load("components/nav.html");
+$("#nav").load((function(){
+    if (typeof customNav !== "undefined")
+        return "components/" + customNav;
+    else return "components/nav.html";
+})());
 $("footer").load("components/footer.html");
 $("#loader").delay(100).fadeOut(400);

@@ -1,5 +1,5 @@
-* {
-  font-family: "Montserrat", sans-serif;
+*:not(.material-icons) {
+  font-family: "Montserrat", sans-serif!important;
 }
 .boldest {
   font-weight: 800;
@@ -14,7 +14,7 @@
   z-index: 1000;
 }
 nav {
-  background: rgba(25, 40, 84, 1);
+  background: #0A6D55;
   position: fixed;
   z-index: 999;
 }
@@ -55,13 +55,32 @@ nav .sidenav-trigger span {
   font-size: 30px;
   padding: 0 15px;
 }
-.sidenav a span.material-icon{
+.sidenav a span.material-icon {
   position: relative;
   top: 6px;
 }
 .page-footer {
-  background-color: #54bbff;
+  background-color: #27A661;
 }
 .footer-copyright {
   background-color: rgb(25 40 84 / 20%) !important;
+}
+.sidenav a span.material-icons {
+  position: relative;
+  top: 6px;
+}
+
+#home .btn {
+  width: 170px;
+  font-weight: 600;
+  background: #27a661;
+  margin: 5px 0;
+}
+nav:nth-child(1) img{
+  height: 44px;
+}
+@media only screen and (min-width: 601px) {
+  nav:nth-child(1) img{
+    height: 50px;
+  }
 }
