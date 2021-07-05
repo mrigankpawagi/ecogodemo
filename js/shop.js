@@ -19,19 +19,23 @@ $("#choosesite").click(function () {
         $("#expanded").show();
     }
 });
-
 for(var x = 0; x < products.length; x++){
     $("#products").append(`
     
     <div class="col s12 m6 l4">
       <div class="card">
         <div class="card-image">
-          <img src="images/products/` + x + `.jpg">
-          <span class="card-title">` + products[x].title + `</span>
+          <img style="background-image: url('images/products/` + x + `.jpg');">
+          <b class="card-title bolder">` + products[x].title + `</b>
           <a class="btn-floating halfway-fab waves-effect waves-light red"><i class="material-icons">add_shopping_cart</i></a>
         </div>
         <div class="card-content">
-          <p>I am a very simple card. I am good at containing small bits of information. I am convenient because I require little markup to use effectively.</p>
+        <span class="price">` + products[x].price + `</span>
+        <br>
+        <span class="tag">` + products[x].type + `</span>
+        <br><br>
+        <span>` + '<span class="material-icons green-text">star</span>'.repeat(products[x].rating) + `</span>
+          <p>` + products[x].description + `</p>
         </div>
       </div>
     </div>

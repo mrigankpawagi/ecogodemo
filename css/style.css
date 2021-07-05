@@ -2,7 +2,10 @@
   font-family: "Montserrat", sans-serif!important;
 }
 .boldest {
-  font-weight: 800;
+  font-weight: 800!important;
+}
+.bolder {
+  font-weight: 600!important;
 }
 #loader {
   position: fixed;

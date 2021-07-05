@@ -7,10 +7,56 @@
     <div class="divider"></div>
 </li>
 <li>
-    <a href="#">
-        <span class="material-icons middled">
-            home
-        </span>
-        FILTERS!!
-    </a>
+    <p class="bolder">Location</p>
+    <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d23588.335398895637!2d-71.09607786182997!3d42.35228873136476!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89e370aa715924f5%3A0x3fd154976bbf1588!2sArea%202%2FMIT%2C%20Cambridge%2C%20MA%2C%20USA!5e0!3m2!1sen!2sin!4v1625506005831!5m2!1sen!2sin"
+        width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+    <button class="waves-effect waves-light btn-small" href="#"><i class="material-icons left">near_me</i> Near
+        Me</button>
 </li>
+<li>
+    <p class="bolder">Within <span data-source="within">10</span> km</p>
+
+    <p class="range-field">
+        <input type="range" id="within" min="0" max="10" value="10" />
+    </p>
+</li>
+<li>
+    <div class="divider"></div>
+</li>
+<li>
+    <p class="bolder">Type</p>
+    <div class="menu-items-cont">
+        <span class="menu-item">Online</span><span class="menu-item">Brick & Mortar</span>
+    </div>
+</li>
+<li>
+    <div class="divider"></div>
+</li>
+<li>
+    <p class="bolder">Price (HK$)</p>
+    <div class="input-field">
+        <i class="material-icons prefix">arrow_downward</i>
+        <input id="minprice" type="number" class="validate">
+        <label for="minprice">Minimum</label>
+      </div>
+      <div class="input-field">
+          <i class="material-icons prefix">arrow_upward</i>
+          <input id="maxprice" type="number" class="validate">
+          <label for="maxprice">Maximum</label>
+        </div>
+
+</li>
+<li>
+    <div class="divider"></div>
+</li>
+
+<li>
+    <br>
+    <br>
+</li>
+<script>
+    $("input[type=range]").change(function () {
+        $("*[data-source=" + $(this).attr('id') + "]").text($(this).val());
+    });
+</script>

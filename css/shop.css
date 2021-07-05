@@ -34,6 +34,71 @@
   top: 8px;
 }
 
-.breadcrumbs a{
+.breadcrumbs a {
   color: green;
+}
+.price::before {
+  content: "HK$";
+}
+.price {
+  font-size: 2em;
+}
+.tag:hover {
+  background: #4caf50;
+  color: #fff;
+}
+.tag {
+  border: 2px solid #4caf50;
+  padding: 3px 10px;
+  border-radius: 10px;
+  margin: 5px 0;
+  transition: 0.3s all;
+  cursor: pointer;
+}
+
+.card-image img {
+  height: 200px;
+}
+
+.sidenav iframe {
+  border: 0;
+  width: 100%;
+  height: 250px;
+  margin: auto;
+  display: block;
+}
+.sidenav li {
+  padding: 0 10px;
+}
+.sidenav p {
+  margin: 0;
+}
+.menu-item {
+  transition: 0.2s all;
+  border: 2px solid #4caf50;
+  padding: 3px 10px;
+  border-radius: 10px;
+  margin: 0 2px;
+  cursor: pointer;
+}
+.menu-item:hover,
+.menu-item.selected {
+  background: #4caf50;
+  color: #fff;
+}
+.menu-items-cont {
+  line-height: 30px;
+}
+.sidenav::-webkit-scrollbar-thumb {
+  background: #999;
+}
+.sidenav::-webkit-scrollbar {
+  width: 6px;
+}
+.range-field > span {
+  line-height: 1.5;
+}
+.input-field > label {
+  -webkit-transform: translateY(0);
+  transform: translateY(0);
 }
