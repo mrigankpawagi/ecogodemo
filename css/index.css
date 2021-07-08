@@ -53,3 +53,14 @@
   right: 10px;
   font-size: 20px;
 }
+#subscribe {
+  padding: 25px 0;
+}
+#subscribe label {
+  color: green !important;
+}
+#subscribe input[type="submit"] {
+  background: green;
+  font-weight: bold;
+  text-transform: uppercase;
+}

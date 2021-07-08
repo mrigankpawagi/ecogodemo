@@ -102,3 +102,22 @@
   -webkit-transform: translateY(0);
   transform: translateY(0);
 }
+.spent span:nth-child(2), .earned span:nth-child(2) {
+  position: relative;
+  top: 2px;
+}
+.spent span, .earned span {
+  display: block;
+  float: left;
+  font-weight: bold;
+}
+#usermodal .collapsible-header{
+  display: flow-root;
+}
+#usermodal .businessname{
+  position: relative;
+  top: -3px;
+}
+#usermodal{
+  max-height: 70%;
+}

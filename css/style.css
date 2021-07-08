@@ -1,11 +1,11 @@
 *:not(.material-icons) {
-  font-family: "Montserrat", sans-serif!important;
+  font-family: "Montserrat", sans-serif !important;
 }
 .boldest {
-  font-weight: 800!important;
+  font-weight: 800 !important;
 }
 .bolder {
-  font-weight: 600!important;
+  font-weight: 600 !important;
 }
 #loader {
   position: fixed;
@@ -17,7 +17,7 @@
   z-index: 1000;
 }
 nav {
-  background: #0A6D55;
+  background: #0a6d55;
   position: fixed;
   z-index: 999;
 }
@@ -63,7 +63,7 @@ nav .sidenav-trigger span {
   top: 6px;
 }
 .page-footer {
-  background-color: #27A661;
+  background-color: #27a661;
 }
 .footer-copyright {
   background-color: rgb(25 40 84 / 20%) !important;
@@ -79,11 +79,25 @@ nav .sidenav-trigger span {
   background: #27a661;
   margin: 5px 0;
 }
-nav:nth-child(1) img{
+nav:nth-child(1) img {
   height: 44px;
 }
 @media only screen and (min-width: 601px) {
-  nav:nth-child(1) img{
+  nav:nth-child(1) img {
     height: 50px;
   }
+}
+
+.modal-content p .material-icons {
+  top: 5px;
+  position: relative;
+}
+.modal-content h5 .material-icons {
+  top: 2px;
+  position: relative;
+}
+
+.spent span, .earned span {
+  display: block;
+  float: left;
 }
