@@ -49,7 +49,7 @@ for (var i = 0; i < biz.length; i++) {
     </div>
 
     `);
-  
+
   for (var j = 0; j < biz[i].products.length; j++) {
     p = biz[i].products[j];
     $("#products").append(`
@@ -161,23 +161,59 @@ function searchForThings(e) {
   var bcards = $("#businesses .card");
   var pcards = $("#products .card");
 
-  bcards.map(function (e){
-    if(JSON.stringify(biz[$(bcards[e]).attr('data-id')]).toLowerCase().search(v) == -1){
+  bcards.map(function (e) {
+    if (JSON.stringify(biz[$(bcards[e]).attr('data-id')]).toLowerCase().search(v) == -1) {
       $(bcards[e]).hide();
     }
-    else{
+    else {
       $(bcards[e]).show();
     }
   });
 
-  
-  pcards.map(function (e){
-    if(JSON.stringify(biz[$(pcards[e]).attr('data-id').split('-')[0]]).toLowerCase().search(v) == -1){
+
+  pcards.map(function (e) {
+    if (JSON.stringify(biz[$(pcards[e]).attr('data-id').split('-')[0]]).toLowerCase().search(v) == -1) {
       $(pcards[e]).hide();
     }
-    else{
+    else {
       $(pcards[e]).show();
     }
   });
 
 }
+
+$("#products .card").click(function () {
+  [i, j] = $(this).attr('data-id').split('-');
+  $("#productname").text(biz[i].products[j].name);
+  $("#productsellername").text(biz[i].name);
+  $("#productprice").text('HK$' + biz[i].products[j].price);
+  $("#productrating").html('<span class="material-icons green-text">star</span>'.repeat(Math.round(Math.random() * 5)));
+  $("#productdescription").text(biz[i].products[j].description);
+  $("#producttags").html((biz[i].products[j].tag != undefined ? biz[i].products[j].tag.map(function (e) {
+    return `<span class="tag">` + e + `</span>`;
+  }) : ''));
+  $("#productimage").attr('src', 'images/products/' + biz[i].name + '/' + j + '.png');
+  $("#viewproduct").modal('open');
+});
+
+$("#businesses .card").click(function () {
+  
+  i = $(this).attr('data-id');
+  $("#businessname").text(biz[i].name);
+  $("#businesstags").html('<span class="tag">' + biz[i].type + '</span>');
+  $("#businessdescription").text(biz[i].description);
+  $("#businessaddress").text(biz[i].address);
+
+  $("#businessproducts").attr("data-query", biz[i].name);
+  
+  $("#viewbusiness").modal('open');
+});
+
+$("#businessproducts").click(function () {  
+  $("#viewbusiness").modal('close');
+  $("#search").val($(this).attr("data-query"));
+  $("#search").keyup();
+  $("#search").focus();
+  $("#miniHero a")[0].click();
+  $("#compressed > h2").text("Explore Products");
+});

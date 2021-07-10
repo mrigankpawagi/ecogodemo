@@ -55,7 +55,9 @@
   transition: 0.3s all;
   cursor: pointer;
 }
-
+.rel{
+  position: relative;
+}
 .card-image img {
   height: 200px;
 }
@@ -200,7 +202,8 @@
   margin-right: 50px;
 }
 
-.description {padding-top: 10px;
+.description {
+  padding-top: 10px;
   margin-right: 20px;
   width: 150px;
 }
@@ -286,30 +289,63 @@ input:focus {
     margin-right: 20px;
   }
 }
-#cartmodal, #visitmodal{
+#cartmodal,
+#visitmodal {
   width: 95%;
 }
-#explorebusinesses{
+#explorebusinesses {
   display: none;
 }
-#explorebusinesses iframe{
+#explorebusinesses iframe {
   width: 100%;
   height: 200px;
 }
-#products .card-image img{
+#products .card-image img {
   background-size: cover;
   background-position: center;
-}#products .card-title.bolder {
+}
+#products .card-title.bolder {
   background: rgb(0 0 0 / 50%);
   width: 100%;
 }
-#products .card, #businesses .card{
-    cursor: pointer;
+#products .card,
+#businesses .card {
+  cursor: pointer;
 }
 #businesses .card-content .material-icons {
   position: relative;
   top: 6px;
 }
-#businessesfilter{
+#businessesfilter {
   display: none;
+}
+#productimage {
+  width: 100%;
+  display: block;
+  margin: auto;
+  max-width: 400px;
+}
+#viewproduct,
+#viewbusiness,
+#cartmodal,
+#visitmodal {
+  width: 95%;
+  top: 5% !important;
+  height: 90%;
+  max-height: none;
+}
+#viewproduct .like-btn{
+  top: -20px;
+  left: 110px;
+}
+#viewbusiness .like-btn{
+  top: -20px;
+  left: 115px;
+}
+#viewbusiness .btn{
+  width: 100%;
+  margin: 5px 0;
+}
+.shopping-cart .image img{
+  height: 100%;
 }

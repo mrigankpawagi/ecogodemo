@@ -131,7 +131,7 @@
 					</span> <a href=#>Products</a>
 
 				<div id="products" class="row">
-					
+
 				</div>
 
 			</div>
@@ -148,7 +148,7 @@
 					</span> <a href=#>Businesses</a>
 
 				<div id="businesses" class="row">
-					
+
 				</div>
 
 			</div>
@@ -169,6 +169,66 @@
 
 	<footer class="page-footer"></footer>
 	<!--MODALS-->
+	<div id="viewproduct" class="modal modal-fixed-footer">
+		<div class="modal-content">
+			<h5 class="bolder" id="productname"></h5>
+			<b class="bolder" id="productsellername"></b>
+			<br><br>
+			<div class="row">
+
+				<div class="col s12 m6"><img id="productimage" src=""></div>
+				<div class="col s12 m6">
+					<span id="producttags"></span>
+					<br><br>
+					<h4 id="productprice"></h4>
+					<span id="productrating"></span>
+					<br>
+					<a class="waves-effect waves-light btn green col s12"><i class="material-icons left">storefront</i>Visit and Buy</a>
+					<br><br>
+					<a class="waves-effect waves-light btn blue-text text-darken-4 blue lighten-3 col s12"><i class="material-icons left">shopping_cart</i>Order Online</a>
+					<br><br><hr>
+					<p class="rel"><span class="like-btn"></span> Like this product?</p>
+					<p id="productdescription"></p>
+				</div>
+			</div>
+			<hr>
+			<div class="commentbox" id="productcomments"></div>
+			<script src="https://unpkg.com/commentbox.io/dist/commentBox.min.js"></script>
+			<script>commentBox('5730988210520064-proj')</script>
+
+		</div>
+		<div class="modal-footer">
+			<a href="#!" class="modal-close waves-effect waves-green btn-flat">Back</a>
+		</div>
+	</div><div id="viewbusiness" class="modal modal-fixed-footer">
+		<div class="modal-content">
+			<h5 class="bolder" id="businessname"></h5>
+			<span id="businessaddress"></span>
+			<br><br>
+			
+					<span id="businesstags"></span>
+					<br>
+					<br>
+					<div class="row">
+				<div class="col s12 m6">
+						<a class="waves-effect waves-light btn green"><i class="material-icons left">navigation</i>Directions</a>
+					</div><div class="col s12 m6">
+					<a class="waves-effect waves-light btn blue-text text-darken-4 blue lighten-3" id="businessproducts"><i class="material-icons left">inventory_2</i>View Products</a>
+				</div></div>
+					<hr>
+					<p class="rel"><span class="like-btn"></span> Like this business?</p>
+					<p id="businessdescription"></p>
+				
+			<hr>
+			<div class="commentbox" id="businesscomments"></div>
+			<script src="https://unpkg.com/commentbox.io/dist/commentBox.min.js"></script>
+			<script>commentBox('5730988210520064-proj')</script>
+
+		</div>
+		<div class="modal-footer">
+			<a href="#!" class="modal-close waves-effect waves-green btn-flat">Back</a>
+		</div>
+	</div>
 	<div id="usermodal" class="modal bottom-sheet modal-fixed-footer">
 		<div class="modal-content">
 			<h5 class="bolder"><i class="material-icons">person_pin
@@ -206,13 +266,13 @@
 					</div>
 
 					<div class="image">
-						<img src="images/cart/item-1.png" alt="" />
+						<img src="images/products/Bydeau/1.png" alt="" />
 					</div>
 
 					<div class="description">
-						<span>Common Projects</span>
-						<span>Bball High</span>
-						<span>White</span>
+						<span>The Luisia</span>
+						<span></span>
+						<span>Bydeau</span>
 					</div>
 
 					<div class="quantity">
@@ -225,7 +285,7 @@
 						</button>
 					</div>
 
-					<div class="total-price">$549</div>
+					<div class="total-price">HK$700</div>
 				</div>
 
 				<!-- Product #2 -->
@@ -236,13 +296,13 @@
 					</div>
 
 					<div class="image">
-						<img src="images/cart/item-2.png" alt="" />
+						<img src="images/products/reBooked/1.png" alt="" />
 					</div>
 
 					<div class="description">
-						<span>Maison Margiela</span>
-						<span>Future Sneakers</span>
-						<span>White</span>
+						<span>The Owl and the Pussycat</span>
+						<span></span>
+						<span>reBooked</span>
 					</div>
 
 					<div class="quantity">
@@ -255,7 +315,7 @@
 						</button>
 					</div>
 
-					<div class="total-price">$870</div>
+					<div class="total-price">$15</div>
 				</div>
 
 				<!-- Product #3 -->
@@ -266,13 +326,13 @@
 					</div>
 
 					<div class="image">
-						<img src="images/cart/item-3.png" alt="" />
+						<img src="images/products/Bydeau/3.png" alt="" />
 					</div>
 
 					<div class="description">
-						<span>Our Legacy</span>
-						<span>Brushed Scarf</span>
-						<span>Brown</span>
+						<span>The Paige</span>
+						<span></span>
+						<span>Bydeau</span>
 					</div>
 
 					<div class="quantity">
@@ -285,7 +345,7 @@
 						</button>
 					</div>
 
-					<div class="total-price">$349</div>
+					<div class="total-price">$600</div>
 				</div>
 			</div>
 		</div>
@@ -312,13 +372,13 @@
 					</div>
 
 					<div class="image">
-						<img src="images/cart/item-1.png" alt="" />
+						<img src="images/products/Bydeau/1.png" alt="" />
 					</div>
 
 					<div class="description">
-						<span>Common Projects</span>
-						<span>Bball High</span>
-						<span>White</span>
+						<span>The Luisia</span>
+						<span></span>
+						<span>Bydeau</span>
 					</div>
 
 					<div class="quantity">
@@ -331,7 +391,7 @@
 						</button>
 					</div>
 
-					<div class="total-price">$549</div>
+					<div class="total-price">HK$700</div>
 				</div>
 
 				<!-- Product #2 -->
@@ -342,13 +402,13 @@
 					</div>
 
 					<div class="image">
-						<img src="images/cart/item-2.png" alt="" />
+						<img src="images/products/reBooked/1.png" alt="" />
 					</div>
 
 					<div class="description">
-						<span>Maison Margiela</span>
-						<span>Future Sneakers</span>
-						<span>White</span>
+						<span>The Owl and the Pussycat</span>
+						<span></span>
+						<span>reBooked</span>
 					</div>
 
 					<div class="quantity">
@@ -361,7 +421,7 @@
 						</button>
 					</div>
 
-					<div class="total-price">$870</div>
+					<div class="total-price">$15</div>
 				</div>
 
 				<!-- Product #3 -->
@@ -372,13 +432,13 @@
 					</div>
 
 					<div class="image">
-						<img src="images/cart/item-3.png" alt="" />
+						<img src="images/products/Bydeau/3.png" alt="" />
 					</div>
 
 					<div class="description">
-						<span>Our Legacy</span>
-						<span>Brushed Scarf</span>
-						<span>Brown</span>
+						<span>The Paige</span>
+						<span></span>
+						<span>Bydeau</span>
 					</div>
 
 					<div class="quantity">
@@ -391,15 +451,15 @@
 						</button>
 					</div>
 
-					<div class="total-price">$349</div>
+					<div class="total-price">$600</div>
 				</div>
 			</div>
 		</div>
 		<div class="modal-footer">
 			<a href="#!" class="modal-close waves-effect waves-green btn-flat">Close</a>
 			<a href="#!" class="waves-effect waves-green green btn-flat white-text"> <i class="left material-icons">
-					account_balance_wallet
-				</i> Check Out</a>
+					navigation
+				</i> Nagivate to Stores</a>
 		</div>
 	</div>
 	<!--SCRIPTS-->

@@ -30,6 +30,10 @@ nav a.brand-logo {
 nav .sidenav-trigger {
   display: block !important;
 }
+.brand-logo img {
+  width: 100px!important;
+  height: 25px!important;
+}
 nav img,
 nav .sidenav-trigger span {
   left: 0;
@@ -88,6 +92,13 @@ nav:nth-child(1) img {
   }
 }
 
+@media only screen and (min-width: 431px) {
+  .brand-logo img {
+    width: 200px!important;
+    height: 50px!important;
+  }
+}
+
 .modal-content p .material-icons {
   top: 5px;
   position: relative;
@@ -97,7 +108,8 @@ nav:nth-child(1) img {
   position: relative;
 }
 
-.spent span, .earned span {
+.spent span,
+.earned span {
   display: block;
   float: left;
 }
