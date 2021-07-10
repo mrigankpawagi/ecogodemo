@@ -1,164 +1,190 @@
 const biz = [
   {
     name: "Edgar",
+    description: "Tucked away on Moon Street, Edgar's spacious store boasts gravity bins, glass jars, and a large range of eco-friendly products. There are also tons of nibbles available, from truffle covered almonds to organic lollipops and freeze-dried fruits. Edgar often has small pop-ups or kiosks across town too, so keep your eyes peeled on its Facebook page for the latest updates.",
     address: "5 Moon Street, Wan Chai",
     type: "Retail",
     products: [
       {
         name: "Okra chips",
-        price: "__",
-        description: "__"
+        tag: ['Vegan'],
+        price: "0.50",
+        description: "Prevents constipation, bad breath, and acne while relieving sore throat. Good for skin health maintenance, speeds up recovery from gastritis, gastric ulcer, and wounds."
       },
       {
         name: "Travel mug",
-        price: "__",
-        description: "__"
+        tag: ['Vegan'],
+        price: "155.00",
+        description: "These brilliant rCUPs are the first portable travel mugs made from recycled paper coffee cups. They have push lids, for easy drinking on the go, and provide a 360-degree drinking experience."
       },
       {
         name: "Coconut Matter Probiotic Deodorant Sticks",
-        price: "__",
-        description: "__"
+        tag: ['Vegan'],
+        price: "145.00",
+        description: "MOOD Deodorant by Coconut Matter is a blend of carefully selected plants and minerals based ingredients. MOOD deodorants are fully biodegradable from content to packaging."
       },
       {
         name: "Ecostore - Shampoo Bar",
-        price: "__",
-        description: "__"
+        tag: ['Vegan'],
+        price: "155.00",
+        description: "Triple milled for a rich creamy lather. Made from plant and mineral-based ingredients."
       },
-    ]    
+    ]
   },
   {
     name: "Live Zero",
+    description: "Hong Kong’s first zero-waste grocery store, Live Zero offers a comprehensive range of eco-friendly, plastic-free products including stainless steel straws, beeswax food wraps, bamboo toothbrushes, water bottles, and more. Another reason this shop is great is it allows you to buy organic food and ingredients in bulk. We’re talking wheat flour, pumpkin seeds, dried fruit, quinoa, oats, and almost every nut conceivable. Essentially, this is ground zero for your zero-waste lifestyle.",
     address: "33 High Street, Sai Ying Pun",
     type: "Retail",
     products: [
       {
         name: "Ethique Lip Balm",
-        price: "__",
-        description: "__"
+        tag: ['Vegan'],
+        price: "90.00",
+        description: "Do good for your lips with our lip balms – packed with nourishing plant-based ingredients; cocoa butter, castor seed, moringa and jojoba oils to hydrate and leave your lips feeling smooth and supple for longer. Do good for the planet – 100% plastic-free, home compostable packaging (yes, the tube!). Do good for people - Carefully crafted with luxurious fairly traded sustainable ingredients from Rwanda, Ghana and Samoa to help support farming cooperatives (predominantly women owned) in these regions. Direct trade ensures that local growers receive stable prices and, reliable income which means in turn they are better able to look after their community and their environment."
       },
       {
         name: "Sienna Glass Nail File",
-        price: "__",
-        description: "__"
+        tag: ['Vegan'],
+        price: "120.00",
+        description: "Our everlasting glass file will be the last one you will ever buy. These babies never go blunt and are the embodiment of ‘buy better, buy less’. This glass nail file is a beautiful, sustainable addition to your manicure kit. You can use it for years, avoiding disposable lower-quality files."
       },
       {
         name: "Biona - Jackfruit Stew (Organic)",
-        price: "__",
-        description: "__"
+        tag: ['Vegan'],
+        price: "50.00",
+        description: "A hearty jackfruit stew made with tender organic jackfruit pieces, potatoes and carrots in a rich lightly seasoned tomato sauce. This ready-to eat stew is perfect for creating quick and easy plant-based meals in a hurry. Delicious served with rice or fresh crusty bread to mop up any remaining sauce."
       },
       {
         name: "Porter Bowl - Ceramic",
-        price: "__",
-        description: "__"
+        tag: ['Vegan'],
+        price: "380.00",
+        description: "The Porter Bowl’s minimalist design & muted hues let you cut down on single-use plastics and look good doing it. Roomy, one-litre capacity packs everything from big salads and grain bowls to pasta and veggies."
       },
-    ]    
+    ]
   },
   {
     name: "VomFass",
+    description: "VomFass is where you need to go for all your liquid staples. The store offers artisanal vinegar, oils, wines, rare whiskies, rums, sake from around the world. Vom fass is a German phrase meaning 'from the cask', and most of the spirits, oils, and vinegar available in the store can be sampled directly from the cask before purchase. They currently have five locations dotted around town where customers can go and buy a glass bottle to fill up with whatever they need. The shop will even knock off a sweet $10 from your purchase the next time you bring it back for a refill!",
     address: "Great Food Hall, Two Pacific Place",
     type: "Food and Produce",
     products: [
       {
         name: "Basil Extra Virgin Olive Oil",
-        price: "__",
-        description: "__"
+        tag: ['Vegan'],
+        price: "56.00",
+        description: "This oil is excellent for marinating vegetables & is a fine addition to pasta. The King of Herbs as basil is still termed, shows its advantage in combination with tomatoes and mozzarella. Fabulous with lettuce, pasta, risotto and caprese. This oil shouldn't be heated too much to preserve the fine aroma."
       },
       {
         name: "Smoked Sea Salt",
-        price: "__",
-        description: "__"
+        tag: ['Vegan'],
+        price: "86.00",
+        description: "Our Smoked Salt, also called hickory salt, is a pure sea salt of the Dead Sea. It gets its intense taste from being gently cold-smoked over hickory wood. Add a rich, smoky flavor to poultry, grilled meat, and fish."
       },
       {
         name: "Wasabi Fig Mustard",
-        price: "__",
-        description: "__"
+        tag: ['Vegan'],
+        price: "58.00",
+        description: "The sharpness of wasabi combined with the fruitiness of figs is mouth-watering! Try it with fish, seafood, sushi, beef and more."
       },
       {
         name: "Sea Salt Lemon & Pink Peppercorns",
-        price: "__",
-        description: "__"
+        tag: ['Vegan'],
+        price: "59.00",
+        description: "This salt and spice mix is a wonderful summery composition with coarse sea salt, aromatic fresh lemon zest and exquisite pink berries. Perfect for refining fish, poultry or even vegetables."
       },
-    ]    
+    ]
   },
   {
     name: "Hula",
+    description: "New isn’t always better; the team at Hula knows this better than most. The pre-owned designer resellers have just launched Hong Kong’s first pre-loved fashion warehouse, filled with big name brands the likes of Chanel, Gucci, Celine and Isabel Marant, among others.",
     address: "5A Evergreen Industrial Mansion, 12 Yip Fat Street, Wong Chuk Hang",
     type: "Fashion",
     products: [
       {
         name: "Miu Miu Sleeveless Top",
-        price: "__",
-        description: "__"
+        price: "1,300.00",
+        description: "Floral printed black halter neck ruched cropped top with smocked back."
       },
       {
         name: "Calvin Klein Maxi Dress",
-        price: "__",
-        description: "__"
+        price: "1,500.00",
+        description: "Grey, red, and white check button up maxi shirt dress."
       },
       {
         name: "Chanel Pearl Dress",
-        price: "__",
-        description: "__"
+        price: "5,000.00",
+        description: "Pearl chain belt with CC logo."
       },
       {
         name: "Sergio Rossi High Heels",
-        price: "__",
-        description: "__"
+        price: "1,200.00",
+        description: "Brown leather high heels with red knee-length lace up ropes."
       },
-    ]    
+    ]
   },
   {
     name: "Bydeau",
+    description: "Advocates of gifting with a conscience, BYDEAU is a florist unlike any other. It offers beautiful bouquets and unique gift combinations that come wrapped in linen and corrugated cardboard or wooden boxes that can be easily recycled or repurposed.",
     address: "53 Wellington Street, Central",
     type: "Home and Lifestyle",
     products: [
       {
         name: "The Paisley",
-        price: "__",
-        description: "__"
+        tag: ['Vegan'],
+        price: "800.00",
+        description: "Peach melony roses highlighted by lilac Dutch carnations, The Paisley is simple, carefree and sweet to the eyes - the perfect pick-me-up bouquet suitable for all occasions or no reason at all."
       },
       {
         name: "The Luisia",
-        price: "__",
-        description: "__"
+        tag: ['Vegan'],
+        price: "700.00",
+        description: "Does it get any better than fresh greens and bright whites? Add a pop of pink to the mix and its perfection! The Luisia is like sipping on an exotic frozen concoction served on a hot summer day at a far-away beach...and it's just as Instagrammable. So send now, and get those spring vibes going!"
       },
       {
         name: "The Tulipa",
-        price: "__",
-        description: "__"
+        tag: ['Vegan'],
+        price: "1,200.00",
+        description: "The Tulipa, as it is named, is a handheld arrangement of pink Tulips. Pink tulips are known for affection, send this unique tulip arrangement to a family member delivered to their door!"
       },
       {
         name: "The Paige",
-        price: "__",
-        description: "__"
+        tag: ['Vegan'],
+        price: "600.00",
+        description: "Stylish + sweet - get everyone on the same Paige with these swoon-worthy stems. Take a closer look and you will see its multiple colors slowly bursting with joy and sunshine! Perfect for anyone who wants to send that little something that will make their crush, love, or bestie's day! Thankfully for you, that's also what we're best at! We've packed multiple colors of Dianthus and there you have it: the perfect \"I was just thinking of you\" gift!"
       },
-    ]    
+    ]
   },
   {
     name: "reBooked",
+    description: "ReBooked is a non-profit social enterprise that aims to promote a circular economy for children's books.",
     address: "No. 9 Mee Lun Street",
     type: "Bookstore",
     products: [
       {
         name: "A Ball for Daisy",
-        price: "__",
-        description: "__"
+        tag: ['Vegan'],
+        price: "25.00",
+        description: "A Ball for Daisy is a 2011 children's wordless picture book written and illustrated by Chris Raschka. The book tells the story of a dog named Daisy, who has a beloved ball destroyed and then replaced."
       },
       {
         name: "The Owl and the Pussycat",
-        price: "__",
-        description: "__"
+        tag: ['Vegan'],
+        price: "15.00",
+        description: "The Owl and the Pussy-cat is a nonsense poem by Edward Lear, first published during 1871 as part of his book Nonsense Songs, Stories, Botany, and Alphabets."
       },
       {
         name: "The Baby Bible Storybook",
-        price: "__",
-        description: "__"
+        tag: ['Vegan'],
+        price: "20.00",
+        description: "Introduce your toddler to the excitement of reading the Bible in a way that he or she can really enjoy. The specially selected stories and brightly colored illustrations will provide new people to meet, places to see, and stories to hear. Each story includes simple activities and hand motions to go with the stories."
       },
       {
         name: "Harry Potter and the Cursed Child",
-        price: "__",
-        description: "__"
+        tag: ['Vegan'],
+        price: "30.00",
+        description: "Harry Potter and the Cursed Child is a 2016 British two-part play written by Jack Thorne based on an original story by J. K. Rowling, John Tiffany, and Thorne."
       },
-    ]    
+    ]
   },
 ];

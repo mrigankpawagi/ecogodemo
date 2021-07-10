@@ -296,3 +296,20 @@ input:focus {
   width: 100%;
   height: 200px;
 }
+#products .card-image img{
+  background-size: cover;
+  background-position: center;
+}#products .card-title.bolder {
+  background: rgb(0 0 0 / 50%);
+  width: 100%;
+}
+#products .card, #businesses .card{
+    cursor: pointer;
+}
+#businesses .card-content .material-icons {
+  position: relative;
+  top: 6px;
+}
+#businessesfilter{
+  display: none;
+}

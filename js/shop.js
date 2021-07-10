@@ -4,8 +4,9 @@ var customNav = "nav-shop.html";
 $("#miniHero a").click(function () {
   $("#miniHero a").removeClass('selected');
   $(this).addClass('selected');
-  $("#exploreproducts, #explorebusinesses").hide();
+  $("#exploreproducts, #explorebusinesses, #productsfilter, #businessesfilter").hide();
   $("#explore" + $(this).text().toLowerCase()).show();
+  $("#" + $(this).text().toLowerCase() + "filter").show();
 });
 
 $("#choosesite").click(function () {
@@ -22,28 +23,59 @@ $("#choosesite").click(function () {
   }
 });
 
-for (var x = 0; x < products.length; x++) {
-  $("#products").append(`
+function trunc(txt, l) {
+  if (txt.length <= l)
+    return txt;
+  else
+    return txt.slice(0, l) + "…";
+}
+
+for (var i = 0; i < biz.length; i++) {
+  $("#businesses").append(`
     
     <div class="col s12 m6 l4">
-      <div class="card">
-        <div class="card-image">
-          <img style="background-image: url('images/products/` + x + `.jpg');">
-          <b class="card-title bolder">` + products[x].title + `</b>
-          <a class="btn-floating halfway-fab waves-effect waves-light red"><i class="material-icons">add_shopping_cart</i></a>
-        </div>
+      <div class="card" data-id="` + i + `">
         <div class="card-content">
-        <span class="price">` + products[x].price + `</span>
+        <b class="card-title bolder">` + biz[i].name + `</b>   
+        
+        <span class="tag">` + biz[i].type + `</span>     <br><br>
+        <p class="green-text text-darken-3"><i class="material-icons">
+        map
+        </i> ` + biz[i].address + `</p>
         <br>
-        <span class="tag">` + products[x].type + `</span>
-        <br><br>
-        <span>` + '<span class="material-icons green-text">star</span>'.repeat(products[x].rating) + `</span>
-          <p>` + products[x].description + `</p>
+      <p>` + trunc(biz[i].description, 150) + `</p>
         </div>
       </div>
     </div>
 
     `);
+  
+  for (var j = 0; j < biz[i].products.length; j++) {
+    p = biz[i].products[j];
+    $("#products").append(`
+    
+    <div class="col s12 m6 l4">
+      <div class="card" data-id="` + i + `-` + j + `">
+        <div class="card-image">
+          <img style="background-image: url('images/products/` + biz[i].name + '/' + j + `.png');">
+          <b class="card-title bolder">` + p.name + `</b>
+          <a class="btn-floating halfway-fab waves-effect waves-light red"><i class="material-icons">add_shopping_cart</i></a>
+        </div>
+        <div class="card-content">
+        <span class="price">` + p.price + `</span>
+        <br>
+        ` + (p.tag != undefined ? p.tag.map(function (e) {
+      return `<span class="tag">` + e + `</span>`;
+    }) : '') + `
+        <br><br>
+        <span>` + '<span class="material-icons green-text">star</span>'.repeat(Math.round(Math.random() * 5)) + `</span>
+          <p>` + trunc(p.description, 100) + `</p>
+        </div>
+      </div>
+    </div>
+
+    `);
+  }
 }
 
 $("#usermodal .collapsible").html(`
@@ -124,6 +156,28 @@ $('.plus-btn').on('click', function (e) {
   $input.val(value);
 });
 
-function searchForThings(e){
-  console.log(e.val());
+function searchForThings(e) {
+  v = e.val().trim().toLowerCase();
+  var bcards = $("#businesses .card");
+  var pcards = $("#products .card");
+
+  bcards.map(function (e){
+    if(JSON.stringify(biz[$(bcards[e]).attr('data-id')]).toLowerCase().search(v) == -1){
+      $(bcards[e]).hide();
+    }
+    else{
+      $(bcards[e]).show();
+    }
+  });
+
+  
+  pcards.map(function (e){
+    if(JSON.stringify(biz[$(pcards[e]).attr('data-id').split('-')[0]]).toLowerCase().search(v) == -1){
+      $(pcards[e]).hide();
+    }
+    else{
+      $(pcards[e]).show();
+    }
+  });
+
 }

@@ -10,7 +10,7 @@ $("#nav").load((function () {
         $(this).toggleClass('selected');
     });
     M.Range.init(document.querySelectorAll("input[type=range]"));
-    $("#search").keydown(function () { searchForThings($("#search")); });
+    $("#search").keyup(function () { searchForThings($("#search")); });
 });
 $("footer").load("components/footer.html");
 $("#loader").delay(100).fadeOut(400);
