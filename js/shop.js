@@ -1,27 +1,29 @@
 $("#slide-out").load("components/filters.html");
 var customNav = "nav-shop.html";
 
-$("#miniHero a").click(function(){
-    $("#miniHero a").removeClass('selected');
-    $(this).addClass('selected');
+$("#miniHero a").click(function () {
+  $("#miniHero a").removeClass('selected');
+  $(this).addClass('selected');
+  $("#exploreproducts, #explorebusinesses").hide();
+  $("#explore" + $(this).text().toLowerCase()).show();
 });
 
 $("#choosesite").click(function () {
-    if($("#choosesite > i").text() == "expand_less"){
-        $("#choosesite > i").text("expand_more");
-        $("#compressed > h2").text("Explore " + $("#miniHero a.selected").text());
-        $("#compressed").show();
-        $("#expanded").hide();
-    }
-    else{
-        $("#choosesite > i").text("expand_less");
-        $("#compressed").hide();
-        $("#expanded").show();
-    }
+  if ($("#choosesite > i").text() == "expand_less") {
+    $("#choosesite > i").text("expand_more");
+    $("#compressed > h2").text("Explore " + $("#miniHero a.selected").text());
+    $("#compressed").show();
+    $("#expanded").hide();
+  }
+  else {
+    $("#choosesite > i").text("expand_less");
+    $("#compressed").hide();
+    $("#expanded").show();
+  }
 });
 
-for(var x = 0; x < products.length; x++){
-    $("#products").append(`
+for (var x = 0; x < products.length; x++) {
+  $("#products").append(`
     
     <div class="col s12 m6 l4">
       <div class="card">
@@ -44,19 +46,10 @@ for(var x = 0; x < products.length; x++){
     `);
 }
 
-$("#usermodal").html(`
-<div class="modal-content">
-			<h5 class="bolder"><i class="material-icons">person_pin
-				</i> Ethan Song</h5>
-			<p class="green-text text-darken-3"><i class="material-icons">redeem
-				</i> 385 Green Points</p>
-			<br>
-			<p class="bolder"> <i class="material-icons">
-					account_balance_wallet
-				</i> History</p>
-			<ul class="collapsible popout">
+$("#usermodal .collapsible").html(`
+
 				` +
-        `<li>
+  `<li>
         <div class="collapsible-header">
           <i class="material-icons">local_mall</i> <span class="businessname">Rebooked</span>
           <br>
@@ -95,15 +88,42 @@ $("#usermodal").html(`
     </table>
           </div>
       </li>`.repeat(5)
-        + `
-			</ul>
+);
 
-		</div>
-		<div class="modal-footer">
-			<a href="#!" class="waves-effect waves-red btn-flat"> <i class="left material-icons">
-					logout
-				</i> Logout</a>
-			<a href="#!" class="modal-close waves-effect waves-green btn-flat">Close</a>
-		</div>
-    
-    `);
+$('.like-btn').on('click', function () {
+  $(this).toggleClass('is-active');
+});
+$('.minus-btn').on('click', function (e) {
+  e.preventDefault();
+  var $this = $(this);
+  var $input = $this.closest('div').find('input');
+  var value = parseInt($input.val());
+
+  if (value >= 1) {
+    value = value - 1;
+  } else {
+    value = 0;
+  }
+
+  $input.val(value);
+
+});
+
+$('.plus-btn').on('click', function (e) {
+  e.preventDefault();
+  var $this = $(this);
+  var $input = $this.closest('div').find('input');
+  var value = parseInt($input.val());
+
+  if (value < 100) {
+    value = value + 1;
+  } else {
+    value = 100;
+  }
+
+  $input.val(value);
+});
+
+function searchForThings(e){
+  console.log(e.val());
+}

@@ -110,7 +110,7 @@
 		<div id="expanded">
 			<h1>Explore</h1>
 			<a class="selected">Products</a>
-			<a>Stores</a>
+			<a>Businesses</a>
 		</div>
 		<div id="compressed">
 			<h2>Explore Products</h2>
@@ -122,18 +122,41 @@
 	<div>
 		<div class="container">
 			<br>
-			<a class="waves-effect waves-light btn sidenav-trigger" href="#" data-target="slide-out"><i
-					class="material-icons left">filter_alt</i>Apply Filters</a>
-			<br>
-			<p class="breadcrumbs"><a href=#>First</a> <span class="material-icons">
-					navigate_next
-				</span> <a href=#>Second</a> <span class="material-icons">
-					navigate_next
-				</span> <a href=#>Third</a></p>
+			<div id="exploreproducts">
+				<a class="waves-effect waves-light btn sidenav-trigger" href="#" data-target="slide-out"><i
+						class="material-icons left">filter_alt</i>Apply Filters</a>
+				<br>
+				<p class="breadcrumbs"><a href=#>First</a> <span class="material-icons">
+						navigate_next
+					</span> <a href=#>Second</a> <span class="material-icons">
+						navigate_next
+					</span> <a href=#>Third</a></p>
 
-			<div id="products" class="row">
+				<div id="products" class="row">
+					PPP
+				</div>
 
 			</div>
+			<div id="explorebusinesses">
+				<iframe
+					src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3691.836578516995!2d114.1525408!3d22.2841795!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x340401e0bad1e803%3A0x6002a87b964fe381!2sreBooked!5e0!3m2!1sen!2sin!4v1625885634533!5m2!1sen!2sin"
+					style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+				<a class="waves-effect waves-light btn" href="#"><i class="material-icons left">near_me</i>Near Me</a>
+				<a class="waves-effect waves-light btn sidenav-trigger" href="#" data-target="slide-out"><i
+						class="material-icons left">filter_alt</i>Apply Filters</a>
+				<br>
+				<p class="breadcrumbs"><a href=#>First</a> <span class="material-icons">
+						navigate_next
+					</span> <a href=#>Second</a> <span class="material-icons">
+						navigate_next
+					</span> <a href=#>Third</a></p>
+
+				<div id="businesses" class="row">
+					BBB
+				</div>
+
+			</div>
+
 
 			<ul class="pagination center">
 				<li class="disabled"><a href="#!"><i class="material-icons">chevron_left</i></a></li>
@@ -150,11 +173,243 @@
 
 	<footer class="page-footer"></footer>
 	<!--MODALS-->
-	<div id="usermodal" class="modal bottom-sheet modal-fixed-footer"></div>
+	<div id="usermodal" class="modal bottom-sheet modal-fixed-footer">
+		<div class="modal-content">
+			<h5 class="bolder"><i class="material-icons">person_pin
+				</i> Ethan Song</h5>
+			<p class="green-text text-darken-3"><i class="material-icons">redeem
+				</i> 385 Green Points</p>
+			<br>
+			<p class="bolder"> <i class="material-icons">
+					account_balance_wallet
+				</i> History</p>
+			<ul class="collapsible popout">
+			</ul>
+
+		</div>
+		<div class="modal-footer">
+			<a href="#!" class="waves-effect waves-red btn-flat"> <i class="left material-icons">
+					logout
+				</i> Logout</a>
+			<a href="#!" class="modal-close waves-effect waves-green btn-flat">Close</a>
+		</div>
+	</div>
+	<div id="cartmodal" class="modal modal-fixed-footer">
+		<div class="modal-content">
+			<div class="shopping-cart">
+				<!-- Title -->
+				<div class="title bolder">
+					Shopping Cart
+				</div>
+
+				<!-- Product #1 -->
+				<div class="item">
+					<div class="buttons">
+						<span class="delete-btn"></span>
+						<span class="like-btn"></span>
+					</div>
+
+					<div class="image">
+						<img src="images/cart/item-1.png" alt="" />
+					</div>
+
+					<div class="description">
+						<span>Common Projects</span>
+						<span>Bball High</span>
+						<span>White</span>
+					</div>
+
+					<div class="quantity">
+						<button class="plus-btn" type="button" name="button">
+							<img src="images/cart/plus.svg" alt="" />
+						</button>
+						<input type="text" name="name" value="1" class="browser-default">
+						<button class="minus-btn" type="button" name="button">
+							<img src="images/cart/minus.svg" alt="" />
+						</button>
+					</div>
+
+					<div class="total-price">$549</div>
+				</div>
+
+				<!-- Product #2 -->
+				<div class="item">
+					<div class="buttons">
+						<span class="delete-btn"></span>
+						<span class="like-btn"></span>
+					</div>
+
+					<div class="image">
+						<img src="images/cart/item-2.png" alt="" />
+					</div>
+
+					<div class="description">
+						<span>Maison Margiela</span>
+						<span>Future Sneakers</span>
+						<span>White</span>
+					</div>
+
+					<div class="quantity">
+						<button class="plus-btn" type="button" name="button">
+							<img src="images/cart/plus.svg" alt="" />
+						</button>
+						<input type="text" name="name" value="1" class="browser-default">
+						<button class="minus-btn" type="button" name="button">
+							<img src="images/cart/minus.svg" alt="" />
+						</button>
+					</div>
+
+					<div class="total-price">$870</div>
+				</div>
+
+				<!-- Product #3 -->
+				<div class="item">
+					<div class="buttons">
+						<span class="delete-btn"></span>
+						<span class="like-btn"></span>
+					</div>
+
+					<div class="image">
+						<img src="images/cart/item-3.png" alt="" />
+					</div>
+
+					<div class="description">
+						<span>Our Legacy</span>
+						<span>Brushed Scarf</span>
+						<span>Brown</span>
+					</div>
+
+					<div class="quantity">
+						<button class="plus-btn" type="button" name="button">
+							<img src="images/cart/plus.svg" alt="" />
+						</button>
+						<input type="text" name="name" value="1" class="browser-default">
+						<button class="minus-btn" type="button" name="button">
+							<img src="images/cart/minus.svg" alt="" />
+						</button>
+					</div>
+
+					<div class="total-price">$349</div>
+				</div>
+			</div>
+		</div>
+		<div class="modal-footer">
+			<a href="#!" class="modal-close waves-effect waves-green btn-flat">Close</a>
+			<a href="#!" class="waves-effect waves-green green btn-flat white-text"> <i class="left material-icons">
+					account_balance_wallet
+				</i> Check Out</a>
+		</div>
+	</div>
+	<div id="visitmodal" class="modal modal-fixed-footer">
+		<div class="modal-content">
+			<div class="shopping-cart">
+				<!-- Title -->
+				<div class="title bolder">
+					Visit and Buy
+				</div>
+
+				<!-- Product #1 -->
+				<div class="item">
+					<div class="buttons">
+						<span class="delete-btn"></span>
+						<span class="like-btn"></span>
+					</div>
+
+					<div class="image">
+						<img src="images/cart/item-1.png" alt="" />
+					</div>
+
+					<div class="description">
+						<span>Common Projects</span>
+						<span>Bball High</span>
+						<span>White</span>
+					</div>
+
+					<div class="quantity">
+						<button class="plus-btn" type="button" name="button">
+							<img src="images/cart/plus.svg" alt="" />
+						</button>
+						<input type="text" name="name" value="1" class="browser-default">
+						<button class="minus-btn" type="button" name="button">
+							<img src="images/cart/minus.svg" alt="" />
+						</button>
+					</div>
+
+					<div class="total-price">$549</div>
+				</div>
+
+				<!-- Product #2 -->
+				<div class="item">
+					<div class="buttons">
+						<span class="delete-btn"></span>
+						<span class="like-btn"></span>
+					</div>
+
+					<div class="image">
+						<img src="images/cart/item-2.png" alt="" />
+					</div>
+
+					<div class="description">
+						<span>Maison Margiela</span>
+						<span>Future Sneakers</span>
+						<span>White</span>
+					</div>
+
+					<div class="quantity">
+						<button class="plus-btn" type="button" name="button">
+							<img src="images/cart/plus.svg" alt="" />
+						</button>
+						<input type="text" name="name" value="1" class="browser-default">
+						<button class="minus-btn" type="button" name="button">
+							<img src="images/cart/minus.svg" alt="" />
+						</button>
+					</div>
+
+					<div class="total-price">$870</div>
+				</div>
+
+				<!-- Product #3 -->
+				<div class="item">
+					<div class="buttons">
+						<span class="delete-btn"></span>
+						<span class="like-btn"></span>
+					</div>
+
+					<div class="image">
+						<img src="images/cart/item-3.png" alt="" />
+					</div>
+
+					<div class="description">
+						<span>Our Legacy</span>
+						<span>Brushed Scarf</span>
+						<span>Brown</span>
+					</div>
+
+					<div class="quantity">
+						<button class="plus-btn" type="button" name="button">
+							<img src="images/cart/plus.svg" alt="" />
+						</button>
+						<input type="text" name="name" value="1" class="browser-default">
+						<button class="minus-btn" type="button" name="button">
+							<img src="images/cart/minus.svg" alt="" />
+						</button>
+					</div>
+
+					<div class="total-price">$349</div>
+				</div>
+			</div>
+		</div>
+		<div class="modal-footer">
+			<a href="#!" class="modal-close waves-effect waves-green btn-flat">Close</a>
+			<a href="#!" class="waves-effect waves-green green btn-flat white-text"> <i class="left material-icons">
+					account_balance_wallet
+				</i> Check Out</a>
+		</div>
+	</div>
 	<!--SCRIPTS-->
 	<script src="js/jquery.min.js"></script>
 	<script src="js/materialize.min.js"></script>
-	<script src="js/products.js"></script>
+	<script src="js/data.js"></script>
 	<script src="js/shop.js"></script>
 	<script src="js/script.js"></script>
 </body>
