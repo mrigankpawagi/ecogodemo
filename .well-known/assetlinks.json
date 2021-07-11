@@ -1,0 +1,12 @@
+[
+  {
+    "relation": ["delegate_permission/common.handle_all_urls"],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "com.ecogoasia",
+      "sha256_cert_fingerprints": [
+        "CD:D8:5F:33:08:38:BB:76:12:9E:28:6D:F8:5C:BC:3C:06:21:80:53:F9:9B:65:66:B9:68:55:68:C0:82:23:DB"
+      ]
+    }
+  }
+]
