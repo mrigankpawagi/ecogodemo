@@ -1,4 +1,130 @@
-const biz = [
+Array.prototype.chunk = function (size) {
+  let result = [];
+
+  while (this.length) {
+    result.push(this.splice(0, size));
+  }
+
+  return result;
+}
+function render(biz) {
+  for (var i = 0; i < biz.length; i++) {
+    $("#businesses").append(`
+    
+    <div class="col s12 m6 l4">
+      <div class="card" data-id="` + i + `">
+        <div class="card-content">
+        <b class="card-title bolder">` + biz[i].name + `</b>   
+        
+        ` + biz[i].type.map(function (e) {
+      return `<span class="tag">` + e + `</span>`;
+    }).join(' ') + `<br><br>
+        <p class="green-text text-darken-3"><i class="material-icons">
+        map
+        </i> ` + biz[i].address + `</p>
+        <br>
+      <p>` + trunc(biz[i].description, 150) + `</p>
+        </div>
+      </div>
+    </div>
+
+    `);
+
+    if (biz[i].products != undefined) {
+      for (var j = 0; j < biz[i].products.length; j++) {
+        p = biz[i].products[j];
+        $("#products").append(`
+    
+    <div class="col s12 m6 l4">
+      <div class="card" data-id="` + i + `-` + j + `">
+        <div class="card-image">
+          <img style="background-image: url('images/products/` + biz[i].name + '/' + j + `.png');">
+          <b class="card-title bolder">` + p.name + `</b>
+          <a class="btn-floating halfway-fab waves-effect waves-light red"><i class="material-icons">add_shopping_cart</i></a>
+        </div>
+        <div class="card-content">
+        <span class="price">` + p.price + `</span>
+        <br>
+        ` + (p.tag != undefined ? p.tag.map(function (e) {
+          return `<span class="tag">` + e + `</span>`;
+        }) : '') + `
+        <br><br>
+        <span>` + '<span class="material-icons green-text">star</span>'.repeat(Math.round(Math.random() * 5)) + `</span>
+          <p>` + trunc(p.description, 100) + `</p>
+        </div>
+      </div>
+    </div>
+
+    `);
+      }
+    }
+  }
+  $("#products .card").click(function () {
+    [i, j] = $(this).attr('data-id').split('-');
+    $("#productname").text(biz[i].products[j].name);
+    $("#productsellername").text(biz[i].name);
+    $("#productprice").text('HK$' + biz[i].products[j].price);
+    $("#productrating").html('<span class="material-icons green-text">star</span>'.repeat(Math.round(Math.random() * 5)));
+    $("#productdescription").text(biz[i].products[j].description);
+    $("#producttags").html((biz[i].products[j].tag != undefined ? biz[i].products[j].tag.map(function (e) {
+      return `<span class="tag">` + e + `</span>`;
+    }) : ''));
+    $("#productimage").attr('src', 'images/products/' + biz[i].name + '/' + j + '.png');
+    $("#viewproduct").modal('open');
+  });
+
+  $("#businesses .card").click(function () {
+
+    i = $(this).attr('data-id');
+    $("#businessname").text(biz[i].name);
+    $("#businesstags").html(biz[i].type.map(function (e) {
+      return `<span class="tag">` + e + `</span>`;
+    }).join(' '));
+    $("#businessdescription").text(biz[i].description);
+    $("#businessaddress").text(biz[i].address);
+
+    $("#businessproducts").attr("data-query", biz[i].name);
+
+    if(biz[i].link != 0){
+      $("#businesslink").html('<i class="material-icons">link</i> ' + biz[i].link);
+    }
+    if(biz[i].email != 0){
+      $("#businesscontact").append('<i class="material-icons">email</i> ' + biz[i].email + "<br>");
+    }
+    if(biz[i].phone != 0){
+      $("#businesscontact").append('<i class="material-icons">call</i> ' + biz[i].phone + "<br>");
+    }
+    if(biz[i].other != 0){
+      $("#businesscontact").append('<i class="material-icons">sms</i> ' + biz[i].other + "<br>");
+    }
+
+    $("#viewbusiness").modal('open');
+  });
+
+}
+
+head = ["index", "name", "address", "description", "type", "link", "email", "phone", "other", "latitude", "longitude"];
+
+var biz = [];
+$.ajax({
+  url: 'https://spreadsheets.google.com/feeds/cells/1DZV8dOcOZTQ6_fIAAcShDgxJoSdlASq-pO-krHWwPD8/2/public/full?alt=json',
+  method: 'GET',
+  success: function (r) {
+    rows = r.feed.entry.chunk(head.length);
+
+    for (var i = 1; i < rows.length; i++) {
+      let b = {};
+      for (var j = 0; j < head.length; j++) {
+        b[head[j]] = rows[i][j].content.$t;
+      }
+      b.type = b.type.replace(' ', '').toLowerCase().split(',');
+      biz.push(b);
+    }
+    render(biz);
+  }
+});
+
+/*const biz = [
   {
     name: "Edgar",
     description: "Tucked away on Moon Street, Edgar's spacious store boasts gravity bins, glass jars, and a large range of eco-friendly products. There are also tons of nibbles available, from truffle covered almonds to organic lollipops and freeze-dried fruits. Edgar often has small pop-ups or kiosks across town too, so keep your eyes peeled on its Facebook page for the latest updates.",
@@ -187,4 +313,4 @@ const biz = [
       },
     ]
   },
-];
+];*/

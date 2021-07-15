@@ -30,54 +30,6 @@ function trunc(txt, l) {
     return txt.slice(0, l) + "…";
 }
 
-for (var i = 0; i < biz.length; i++) {
-  $("#businesses").append(`
-    
-    <div class="col s12 m6 l4">
-      <div class="card" data-id="` + i + `">
-        <div class="card-content">
-        <b class="card-title bolder">` + biz[i].name + `</b>   
-        
-        <span class="tag">` + biz[i].type + `</span>     <br><br>
-        <p class="green-text text-darken-3"><i class="material-icons">
-        map
-        </i> ` + biz[i].address + `</p>
-        <br>
-      <p>` + trunc(biz[i].description, 150) + `</p>
-        </div>
-      </div>
-    </div>
-
-    `);
-
-  for (var j = 0; j < biz[i].products.length; j++) {
-    p = biz[i].products[j];
-    $("#products").append(`
-    
-    <div class="col s12 m6 l4">
-      <div class="card" data-id="` + i + `-` + j + `">
-        <div class="card-image">
-          <img style="background-image: url('images/products/` + biz[i].name + '/' + j + `.png');">
-          <b class="card-title bolder">` + p.name + `</b>
-          <a class="btn-floating halfway-fab waves-effect waves-light red"><i class="material-icons">add_shopping_cart</i></a>
-        </div>
-        <div class="card-content">
-        <span class="price">` + p.price + `</span>
-        <br>
-        ` + (p.tag != undefined ? p.tag.map(function (e) {
-      return `<span class="tag">` + e + `</span>`;
-    }) : '') + `
-        <br><br>
-        <span>` + '<span class="material-icons green-text">star</span>'.repeat(Math.round(Math.random() * 5)) + `</span>
-          <p>` + trunc(p.description, 100) + `</p>
-        </div>
-      </div>
-    </div>
-
-    `);
-  }
-}
-
 $("#usermodal .collapsible").html(`
 
 				` +
@@ -182,34 +134,7 @@ function searchForThings(e) {
 
 }
 
-$("#products .card").click(function () {
-  [i, j] = $(this).attr('data-id').split('-');
-  $("#productname").text(biz[i].products[j].name);
-  $("#productsellername").text(biz[i].name);
-  $("#productprice").text('HK$' + biz[i].products[j].price);
-  $("#productrating").html('<span class="material-icons green-text">star</span>'.repeat(Math.round(Math.random() * 5)));
-  $("#productdescription").text(biz[i].products[j].description);
-  $("#producttags").html((biz[i].products[j].tag != undefined ? biz[i].products[j].tag.map(function (e) {
-    return `<span class="tag">` + e + `</span>`;
-  }) : ''));
-  $("#productimage").attr('src', 'images/products/' + biz[i].name + '/' + j + '.png');
-  $("#viewproduct").modal('open');
-});
-
-$("#businesses .card").click(function () {
-  
-  i = $(this).attr('data-id');
-  $("#businessname").text(biz[i].name);
-  $("#businesstags").html('<span class="tag">' + biz[i].type + '</span>');
-  $("#businessdescription").text(biz[i].description);
-  $("#businessaddress").text(biz[i].address);
-
-  $("#businessproducts").attr("data-query", biz[i].name);
-  
-  $("#viewbusiness").modal('open');
-});
-
-$("#businessproducts").click(function () {  
+$("#businessproducts").click(function () {
   $("#viewbusiness").modal('close');
   $("#search").val($(this).attr("data-query"));
   $("#search").keyup();
