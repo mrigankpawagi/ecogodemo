@@ -84,7 +84,7 @@ function render(biz) {
     $("#businessaddress").text(biz[i].address);
 
     $("#businessproducts").attr("data-query", biz[i].name);
-
+    $("#businesslink, #businesscontact").html('');
     if(biz[i].link != 0){
       $("#businesslink").html('<i class="material-icons">link</i> ' + biz[i].link);
     }
@@ -92,7 +92,12 @@ function render(biz) {
       $("#businesscontact").append('<i class="material-icons">email</i> ' + biz[i].email + "<br>");
     }
     if(biz[i].phone != 0){
-      $("#businesscontact").append('<i class="material-icons">call</i> ' + biz[i].phone + "<br>");
+      let ph = biz[i].phone.replace(' ', '');
+      if(ph.slice(0,4) !== "+852"){
+        ph = "+852" + ph;
+      }
+
+      $("#businesscontact").append('<i class="material-icons">call</i> ' + ph + "<br>");
     }
     if(biz[i].other != 0){
       $("#businesscontact").append('<i class="material-icons">sms</i> ' + biz[i].other + "<br>");
