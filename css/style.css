@@ -17,12 +17,12 @@
   z-index: 1000;
 }
 nav {
-  background: #007f5f;
-  position: fixed;
+  background: transparent;
+  position: relative;
   z-index: 999;
 }
 nav a.brand-logo {
-  left: 5px;
+  left: 10px;
   transform: translateX(0);
   -webkit-transform: translateX(0);
   height: 100%;
@@ -60,9 +60,43 @@ nav .sidenav-trigger span {
 #home h1 {
   font-size: 20vw;
 }
+
 #home h4 {
   font-size: 30px;
   padding: 0 15px;
+}
+
+img#phone1 {
+  position: absolute;
+  top: 32vh;
+  left: 65vh;
+  width: 60%;
+  height: 60%;
+  z-index: 10
+}
+img#phone2 {
+  position: absolute;
+  top: 27vh;
+  left: 80vh;
+  width: 70%;
+  height: 70%;
+  z-index: 20
+}
+
+img#ourmissionsvg {
+  position: absolute;
+  top: 215vh;
+  left: 14vh;
+  width: 40%;
+  height: 40%;
+}
+
+img#ourstorysvg {
+  position: absolute;
+  top: 267vh;
+  left: 90vh;
+  width: 40%;
+  height: 40%;
 }
 
 .sidenav a span.material-icon {
@@ -84,7 +118,9 @@ nav .sidenav-trigger span {
   width: 170px;
   font-weight: 600;
   background: #27a661;
-  margin: 5px 0;
+  margin: 20px 0;
+  border-radius: 20px;
+  padding: 3px;
 }
 nav:nth-child(1) img {
   height: 44px;

@@ -1,3 +1,6 @@
+.boldest {
+  text-align: left;
+}
 .linkcards > div {
   padding: 5px !important;
 }
@@ -5,19 +8,20 @@
   width: 100%;
   height: 150px;
   display: block;
-  border-radius: 5px;
-  box-shadow: 2px 2px 4px 0px #999;
+  border-radius: 15px;
+  box-shadow: 2px 2px 3px 0px #999;
   transition: 0.3s all;
-  padding: 10px;
-  color: #fff;
-  font-weight: 600;
+  padding: 25px;
+  color: black;
+  font-weight: 650;
   position: relative;
-  text-align: right;
+  text-align: left;
+  top: 28px;
 }
 .linkcards a:hover {
-  box-shadow: 2px 2px 4px 0px #333;
+  box-shadow: 2px 2px 3px 0px #333;
 }
-.linkcards div:nth-child(1) a {
+/*.linkcards div:nth-child(1) a {
   background-image: linear-gradient(
     109.6deg,
     rgba(62, 161, 219, 1) 11.2%,
@@ -60,7 +64,7 @@
   bottom: 10px;
   right: 10px;
   font-size: 20px;
-}
+}*/
 #subscribe {
   padding: 25px 0;
 }
@@ -74,7 +78,4 @@
 }
 .small-text {
   font-size: 12px !important;
-}
-img {
-  padding: 80px;
 }
