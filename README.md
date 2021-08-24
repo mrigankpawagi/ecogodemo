@@ -1,3 +1,3 @@
-# EcoGo | LaunchX Team 50
+# EcoGo 
 
-Working on something amazing.
+Our Landing Page
