@@ -20,6 +20,11 @@
 .linkcards a:hover {
   box-shadow: 2px 2px 3px 0px #333;
 }
+.linkcards a img{
+  display: block;
+  height: 50px;
+  margin-bottom: 1em;
+}
 
 #subscribe {
   padding: 25px 0;
@@ -69,8 +74,8 @@ nav a.brand-logo {
 nav .sidenav-trigger {
   display: block !important;
 }
-.brand-logo img {
-  width: 50px!important;
+.brand-logo img, footer img {
+  width: 200px!important;
   height: 50px!important;
 }
 nav img,
