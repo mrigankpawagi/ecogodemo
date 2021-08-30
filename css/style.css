@@ -1,7 +1,7 @@
 .linkcards > div {
   padding: 5px !important;
 }
-.relpos{
+.relpos {
   position: relative;
 }
 .linkcards a {
@@ -20,7 +20,7 @@
 .linkcards a:hover {
   box-shadow: 2px 2px 3px 0px #333;
 }
-.linkcards a img{
+.linkcards a img {
   display: block;
   height: 50px;
   margin-bottom: 1em;
@@ -45,7 +45,7 @@
   font-family: "Quicksand", sans-serif !important;
 }
 .boldest {
-  font-weight: 800!important;
+  font-weight: 800 !important;
 }
 .bolder {
   font-weight: 600 !important;
@@ -62,7 +62,7 @@
 nav {
   background: transparent;
   position: relative;
-  height: 64px!important;
+  height: 64px !important;
   box-shadow: none;
 }
 nav a.brand-logo {
@@ -74,9 +74,10 @@ nav a.brand-logo {
 nav .sidenav-trigger {
   display: block !important;
 }
-.brand-logo img, footer img {
-  width: 200px!important;
-  height: 50px!important;
+.brand-logo img,
+footer img {
+  width: 200px !important;
+  height: 50px !important;
 }
 nav img,
 nav .sidenav-trigger span {
@@ -90,7 +91,6 @@ nav .sidenav-trigger span {
 #home {
   min-height: calc(100vh - 64px - 50px);
   padding: 50px 50px 0 50px;
-
 }
 #home h1 {
   font-size: 20vw;
@@ -118,33 +118,33 @@ nav .sidenav-trigger span {
   margin-top: 10px;
   margin-right: 5px;
   border-radius: 20px;
-  padding: 3px 10px;  
+  padding: 3px 10px;
   line-height: 30px;
 }
-#home .btn.inverted{
+#home .btn.inverted {
   color: #27a661;
-  background: #fff;
+  background: #fafafa;
 }
-#home img{
+#home img {
   width: 100%;
 }
 
-#home .blob{
+#home .blob {
   position: absolute;
   top: 0;
   width: auto;
   z-index: -1;
 }
-#home .blob.left{
-  left:0;
+#home .blob.left {
+  left: 0;
   height: 75px;
 }
-#home .blob.right{
-  right:0;
+#home .blob.right {
+  right: 0;
   height: 150px;
 }
 
-.blob.middle{  
+.blob.middle {
   position: absolute;
   z-index: -1;
   width: 100%;
@@ -152,97 +152,100 @@ nav .sidenav-trigger span {
   top: -50%;
 }
 
-@media only screen and (min-width: 0){  
-  #home .col:nth-child(2){
+@media only screen and (min-width: 0) {
+  #home .col:nth-child(2) {
     padding-top: 25px;
   }
-  #home{
+  #home {
     padding-left: 25px;
     padding-right: 25px;
   }
-  .blob.middle{
+  .blob.middle {
     top: -35%;
     height: 900px;
   }
 }
 
-@media only screen and (min-width: 601px){  
-  .blob.middle{
+@media only screen and (min-width: 601px) {
+  .blob.middle {
     top: -50vh;
   }
-  #home{    
+  #home {
     padding: 50px 50px 0 50px;
   }
-  #home h3{
+  #home h3 {
     font-size: 25px;
   }
-  #home h5{
+  #home h5 {
     font-size: 16px;
   }
 }
 
-@media only screen and (min-width: 660px){  
-  .blob.middle{
+@media only screen and (min-width: 660px) {
+  .blob.middle {
     top: -50vh;
   }
-  #home h3{
+  #home h3 {
     font-size: 30px;
   }
-  #home h5{
+  #home h5 {
     font-size: 16px;
   }
 }
-@media only screen and (min-width: 760px){  
-  .blob.middle{
+@media only screen and (min-width: 760px) {
+  .blob.middle {
     top: -50vh;
   }
-  #home h3{
+  #home h3 {
     font-size: 35px;
   }
-  #home h5{
+  #home h5 {
     font-size: 16px;
   }
 }
 
-@media only screen and (min-width: 860px){
-  .blob.middle{
+@media only screen and (min-width: 860px) {
+  .blob.middle {
     top: -50vh;
   }
-  #home h5{
-    font-size: 16px;
-  }
 }
 
-@media only screen and (min-width: 1000px){
-  .blob.middle{
+@media only screen and (min-width: 1000px) {
+  .blob.middle {
     top: -70vh;
   }
-  #home .col:nth-child(1){
+  #home .col:nth-child(1) {
     padding-top: 80px;
   }
-  #home h3{
+  #home h3 {
     font-size: 48px;
   }
-  #home .btn{    
+  #home .btn {
     line-height: 30px;
     font-size: 20px;
     padding: 10px 20px;
     height: 50px;
     border-radius: 40px;
   }
+  #home h5 {
+    font-size: 20px;
+  }
 }
 
-@media only screen and (min-width: 1200px){
-  .blob.middle{
+@media only screen and (min-width: 1200px) {
+  .blob.middle {
     top: -60vh;
   }
-  #home .col:nth-child(1){
+  #home .col:nth-child(1) {
     padding-top: 100px;
   }
-  #home h3{
+  #home h3 {
     font-size: 60px;
   }
-  #home .btn{    
+  #home h5 {
+    font-size: 25px;
+  }
+  #home .btn {
     line-height: 30px;
     font-size: 20px;
     padding: 10px 20px;
@@ -250,25 +253,27 @@ nav .sidenav-trigger span {
     border-radius: 40px;
   }
 }
-@media only screen and (min-width: 1400px){
-  .blob.middle{
+@media only screen and (min-width: 1400px) {
+  .blob.middle {
     top: -50vh;
   }
-  #home .col:nth-child(1){
+  #home .col:nth-child(1) {
     padding-top: 100px;
   }
-  #home h3{
+  #home h3 {
     font-size: 70px;
   }
-  #home .btn{    
-    line-height: 30px;
-    font-size: 30px;
-    padding: 10px 20px;
-    height: 50px;
-    border-radius: 40px;
+  #home h5 {
+    font-size: 28px;
   }
 }
 
-img.full{
+img.full {
   width: 100%;
+}
+
+@media only screen and (max-width: 450px) {
+  .linkcards a {
+    font-size: 12px;
+  }
 }
