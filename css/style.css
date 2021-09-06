@@ -65,6 +65,9 @@ nav {
   height: 64px !important;
   box-shadow: none;
 }
+nav.nav-extended .nav-wrapper{
+  min-height: 64px !important;
+}
 nav a.brand-logo {
   left: 10px;
   transform: translateX(0);
@@ -276,4 +279,16 @@ img.full {
   .linkcards a {
     font-size: 12px;
   }
+}
+
+#socialLinks{
+  position: absolute;
+  top: 20px;
+  right: 10px;
+}
+.socialLink{
+  margin-left: 10px;
+}
+.socialLink img{
+  width: 24px!important;
 }
